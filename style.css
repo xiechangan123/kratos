@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: Kratos
-Text Domain: kratos
-Version: 4.3.3
+Version: 4.3.4
 Requires PHP: 8.0
 Requires at least: 5.3.0
 Description: 主题提供了多种针对自媒体博客需求的侧栏工具，删繁就简专注于用户的阅读体验，优化的邮件中心为你的网站留存加分添彩。
@@ -679,13 +678,10 @@ ol {
 }
 
 .k-main .board .article-panel .a-post .header {
-  display: -webkit-box;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   margin: 3px 0 6px;
-  max-height: 25px;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
 }
 
 .k-main .board .article-panel .a-post .header .label {
@@ -723,13 +719,18 @@ ol {
 }
 
 .k-main .board .article-panel .a-post .header .title {
-  display: inline;
   margin: 0;
+  min-width: 0;
+  flex: 1;
   font-size: 21px;
 }
 
 .k-main .board .article-panel .a-post .header .title a {
+  display: block;
+  overflow: hidden;
   color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .k-main .board .article-panel .a-post .header .title a:hover {
@@ -741,6 +742,7 @@ ol {
   display: -webkit-box;
   overflow: hidden;
   max-height: 110px;
+  line-clamp: 4;
   text-overflow: ellipsis;
   word-wrap: break-word;
   cursor: default;
@@ -1431,6 +1433,7 @@ ol {
   overflow: hidden;
   margin-top: 10px;
   color: #666;
+  line-clamp: 1;
   text-overflow: ellipsis;
   font-size: 14px;
   -webkit-box-orient: vertical;
@@ -2171,6 +2174,7 @@ ol {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
